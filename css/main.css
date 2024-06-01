@@ -1,0 +1,54 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Work Sans, sans-serif;
+  font-size: 16px;
+  background-color: hsl(275, 100%, 97%);
+  background-image: url("../meterials/background-pattern-desktop.svg");
+  background-repeat: repeat-x;
+  color: hsl(292, 42%, 14%);
+}
+
+#main {
+  background-color: hsl(0, 0%, 100%);
+  width: 40%;
+  border-radius: 20px;
+  box-shadow: 8px 15px 10px rgba(179, 173, 173, 0.1882352941);
+  padding: 3% 5%;
+  margin: 10% auto;
+}
+
+#header h1::before {
+  content: "";
+  background-image: url("../meterials/icon-star.svg");
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-size: 1em;
+  vertical-align: middle;
+  margin-right: 0.5vw;
+}
+
+.section {
+  padding: 5% 0;
+}
+.section:not(:last-of-type) {
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3137254902);
+}
+.section .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section .item:hover {
+  color: hsl(293, 94%, 38%);
+  cursor: pointer;
+}
+.section p {
+  color: hsl(292, 16%, 49%);
+  font-weight: 600;
+}/*# sourceMappingURL=main.css.map */

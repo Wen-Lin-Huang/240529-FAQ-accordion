@@ -15,15 +15,21 @@ body {
     background-image:url('../meterials/background-pattern-desktop.svg');
     background-repeat:repeat-x;
     color:nth($colors,5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;   //設置視口高度
 }
 
 #main {
     background-color:nth($colors,1);
     width:40%;
+    height:80vh;     //容器高度不可高於視口高度,不然內容會超出
+    overflow-y: auto;   //控制內容溢出的處理方式
     border-radius:20px;
     box-shadow:8px 15px 10px #b3adad30;
     padding:3% 5%;
-    margin:10% auto;
+    margin:10vh 0;
 }
 
 #header {
@@ -65,6 +71,26 @@ body {
         font-weight:600;
     }
 }
+
+//<p>隱藏即顯示設定
+.content {
+    display:none;
+}
+.content.show {
+    display:block;
+}
+
+//RWD
+@media (max-width:450px) {
+    body {
+        background-image:url(../meterials/background-pattern-mobile.svg);
+    }
+
+    #main {
+        width:80%;
+    }
+}
+
 
 
 

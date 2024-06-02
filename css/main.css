@@ -11,15 +11,21 @@ body {
   background-image: url("../meterials/background-pattern-desktop.svg");
   background-repeat: repeat-x;
   color: hsl(292, 42%, 14%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #main {
   background-color: hsl(0, 0%, 100%);
   width: 40%;
+  height: 80vh;
+  overflow-y: auto;
   border-radius: 20px;
   box-shadow: 8px 15px 10px rgba(179, 173, 173, 0.1882352941);
   padding: 3% 5%;
-  margin: 10% auto;
+  margin: 10vh 0;
 }
 
 #header h1::before {
@@ -51,4 +57,21 @@ body {
 .section p {
   color: hsl(292, 16%, 49%);
   font-weight: 600;
+}
+
+.content {
+  display: none;
+}
+
+.content.show {
+  display: block;
+}
+
+@media (max-width: 450px) {
+  body {
+    background-image: url(../meterials/background-pattern-mobile.svg);
+  }
+  #main {
+    width: 80%;
+  }
 }/*# sourceMappingURL=main.css.map */
